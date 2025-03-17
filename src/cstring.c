@@ -23,6 +23,16 @@ void cstring_append(CString *cstr, const char *str) {
   cstr->size += strlen(str);
 }
 
+void cstring_replace(CString *cstr, const char *str) {
+  free(cstr->str);
+  cstr->str = strdup(str);
+  cstr->size = strlen(str);
+}
+
+char *cstring_get(CString *cstr) {
+  return cstr->str;
+}
+
 void cstring_free(CString *cstr) {
   free(cstr->str);
   free(cstr);

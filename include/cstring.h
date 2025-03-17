@@ -17,6 +17,12 @@ CString *cstring_from(const char *str);
 // append a string to a CString
 void cstring_append(CString *cstr, const char *str);
 
+// get the string from a CString
+char *cstring_get(CString *cstr);
+
+// replace the string in a CString
+void cstring_replace(CString *cstr, const char *str);
+
 // free a CString
 void cstring_free(CString *cstr);
 
