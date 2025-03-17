@@ -1,0 +1,19 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-pedantic",
+      "-Iinclude",
+      "-o",
+      "build/cstring.o",
+      "src/cstring.c"
+    ],
+    "directory": "/home/felix/Projects/cstring",
+    "file": "/home/felix/Projects/cstring/src/cstring.c",
+    "output": "/home/felix/Projects/cstring/build/cstring.o"
+  }
+]
