@@ -23,6 +23,12 @@ char *cstring_get(CString *cstr);
 // replace the string in a CString
 void cstring_replace(CString *cstr, const char *str);
 
+// append a char to a CString
+void cstring_append_char(CString *cstr, char c);
+
+// compare two CString
+int cstring_cmp(CString *cstr, CString *cstr2);
+
 // free a CString
 void cstring_free(CString *cstr);
 

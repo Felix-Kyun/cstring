@@ -37,3 +37,17 @@ void cstring_free(CString *cstr) {
   free(cstr->str);
   free(cstr);
 }
+
+void cstring_append_char(CString *cstr, char c) {
+  cstr->str = realloc(cstr->str, cstr->size + 2);
+  cstr->str[cstr->size] = c;
+  cstr->str[cstr->size + 1] = '\0';
+  cstr->size++;
+}
+
+int cstring_cmp(CString *cstr, CString *cstr2) {
+  // invert the return value of strcmp
+  // because 0 means equal, and 1 means different
+  // dont ask me why, I dont know
+  return !strcmp(cstr->str, cstr2->str); 
+}
