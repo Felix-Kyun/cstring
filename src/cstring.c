@@ -49,5 +49,16 @@ int cstring_cmp(CString *cstr, CString *cstr2) {
   // invert the return value of strcmp
   // because 0 means equal, and 1 means different
   // dont ask me why, I dont know
-  return !strcmp(cstr->str, cstr2->str); 
+  // return !strcmp(cstr->str, cstr2->str); 
+  if (cstr->size != cstr2->size) {
+    return 0;
+  }
+
+  for (int i = 0; i < cstr->size; i++) {
+    if (cstr->str[i] != cstr2->str[i]) {
+      return 0;
+    }
+  }
+
+  return 1;
 }
